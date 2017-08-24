@@ -3,6 +3,25 @@
 -->
 <openerp>
     <data>
-
+    	<!-- <template id="hr_website.theme" name="Themes"> -->
+   <!--  <link id="bootstrap_css" rel='stylesheet' href='/web/static/lib/bootstrap/css/bootstrap.css' t-ignore="true"/> -->
+    <!-- <link rel="stylesheet" href='/hr_website/static/src/css/website.css' t-ignore="true"/> -->
+<!-- </template> -->
+<template id="website.homepage" name="Homepage" page="True" priority="29">
+<link rel='stylesheet' href='/hr_website/static/src/css/website.css'/>
+</template>
+<template id="show_sign_in" customize_show="True" inherit_id="website.layout" name="Show Sign In" groups="base.group_public">
+    <xpath expr="//a[@t-attf-href='/web/login']" position="replace">
+           <!--  <a t-attf-href="/web/login">
+                <b>Sign isn</b>
+            </a> -->
+    </xpath>
+    <xpath expr="//ul[@id='top_menu']" position="replace">
+    </xpath>
+</template>
+<!-- <template id="user_navbar_hr" inherit_id="website.user_navbar" groups="base.group_user">
+<xpath expr="//nav[@id='oe_main_menu_navbar']" position="replace">
+    </xpath>
+</template> -->
     </data>
 </openerp>
